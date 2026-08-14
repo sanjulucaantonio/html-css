@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/geral.css">
+    <link rel="stylesheet" href="estilos/media.css">
+    <title>Formulário de inscrição</title>
+</head>
+<body>
+    <header>
+        <h1>ISTA</h1>
+        <P>
+            INSTITUTO SUPERIO TÉCNICO  DE ANGOLA
+        </P>
+    </header>
+    <main>
+        <h1>
+            Formulário de Inscrição
+        </h1>
+        <section class="formulario">
+            <form action="#" method="get" autocomplete="on">
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <div class="linha">
+                        <div class="campo">
+                            <label for="inome">Nome Completo</label>
+                            <input type="text" name="Nome" id="inome" required placeholder="Digite o seu nome completo">
+                        </div>
+                        <div class="campo">
+                            <label for="idata">Data de Nascimento</label>
+                            <input type="date" name="Data de Nascimento" id="idata" required autocomplete="data ">
+                        </div>
+                    </div>
+
+                    <div class="linha">
+                       <div class="campo">
+                        <label for="isexo">Sexo</label>
+                        <select name="Sexo" id="isexo" required>
+                            <option selected></option>
+                            <option>Masculino</option>
+                            <option>Femenino</option>
+                        </select>
+                       </div>
+                       <div class="campo">
+                        <label for="ibi">Nº do Bilhete de Indentidade</label>
+                        <input type="text" name="Bilhete" id="ibi" required maxlength="14" >
+                       </div>
+                    </div>
+
+                    <div class="linha">
+                        <div class="campo">
+                            <label for="iems">Data de emissão do BI</label>
+                            <input type="date" name="Data de emissão" id="iems" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="ival">Data de validação do BI</label>
+                            <input type="date" name="Data de validação" id="ival" required>
+                        </div>
+                    </div>
+
+                    <div class="linha">
+                        <div class="campo">
+                            <label for="ipai">Filiação - Pai</label>
+                            <input type="text" name="Pai" id="ipai"required placeholder="Digite o nome completo" autocomplete="name">
+                        </div>
+
+                        <div class="campo">
+                            <label for="imae">Filiação - Mãe</label>
+                            <input type="text" name="Mãe" id="imae" required placeholder="Digite o nome completo">
+                        </div>
+                    </div>
+
+                    <fieldset>
+                        <legend>Outros campos</legend>
+                        <div class="linha">
+                        <div class="campo">
+                            <label for="iemal">Email</label>
+                            <input type="email" name="Email" id="iemail" required placeholder="( ex: aadfr@gmail.com )" autocomplete="email">
+                        </div>
+
+                        <div class="campo">
+                            <label for="itel">Nº de Telefone</label>
+                            <input type="tel" name="Telefone" id="itel" required placeholder="( ex: 9xx xxx xxx)" max="9">
+                        </div>
+                    </div>
+                    
+
+                    <div class="linha">
+                        <div class="campo">
+                            <label for="icurso">Cursos</label>
+                            <select name="Curso" id="icurso" required>
+                                <option selected></option>
+                                <option>Informática</option>
+                                <option>Contabilidade Geral</option>
+                                <option>Finanças</option>
+                            </select>
+                        </div>
+
+                        <div class="campo">
+                            <label for="iper">Periodo</label>
+                            <input type="text" name="Periodo" id="iper" list="iperiodo" required>
+                            <datalist id="iperiodo">
+                                 <option selected></option>
+                                 <option>Manhã</option>
+                                 <option>Tarde</option>
+                                 <option>Noite</option>
+                            </datalist>
+                        </div>
+                    </div>
+                    </fieldset>
+                <button type="reset">Limpar</button> <br>
+                 <button type="submit">Cadastrar-se</button>
+                </fieldset>
+                
+
+               
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>
+            &copy;2026 - INSTITUTO SUPERIO TÉCNICO DE ANGOLA - Todos os direitos reservados. Desenvolvido por <strong><a href="#">Sanjuluca António</a></strong>| Developer Web
+        </p>
+    </footer>
+</body>
+</html>
