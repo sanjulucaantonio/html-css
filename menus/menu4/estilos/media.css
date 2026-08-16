@@ -1,15 +1,23 @@
 @charset "UTF-8";
 
-/*@media(orientation:landscape) and (max-width:750px){
- main
-}*/
+@media(orientation:landscape) and (max-width:750px){
+ main{
+    width: 100%;
+    max-width: 750px;
+    margin: auto;
+ }
+}
 @media(min-width:601px) and (max-width:1024px){
     main{
+        width: 100%;
+        max-width: 750px;
         margin: auto;
     }
 
     header{
-        
+        width: 100%;
+        max-width: 750px;
+        display: block;
         text-align: center;
     }
    #menu{
@@ -35,7 +43,7 @@
 
 @media(min-width:1025px) and (max-width:1440px){
      main{
-        width: 90%;
+        width: 100%;
         max-width: 1000px;
     }
     header{
@@ -66,7 +74,7 @@
 @media(min-width:1440px){
        main{
         width: 100%;
-        max-width: 900px;
+        max-width: 1200px;
     }
     header{
         display: block;
