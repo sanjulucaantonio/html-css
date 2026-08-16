@@ -22,9 +22,12 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
 }
 
+header h1{
+  font-size: 25px;
+}
 
 
 #botao-menu{
