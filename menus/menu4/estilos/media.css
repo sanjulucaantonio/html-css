@@ -14,9 +14,7 @@
         margin: auto;
     }
 
-    header{
-        width: 100%;
-        max-width: 750px;
+     header{
         display: block;
         text-align: center;
     }
