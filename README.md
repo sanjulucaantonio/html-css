@@ -2,7 +2,7 @@
 
 Mekie fam! eu sou o Sanjuluca António,estudante de Engenharia informática.
 
-Este repositório reúne os meus estudos,testes,exercícios e projetos desenvolvidos durante a minha aprendizangem de desenvovimento web.
+Este repositório reúne os meus estudos,testes,exercícios e projetos desenvolvidos durante a minha aprendizangem de desenvolvimento web.
 
 ## Tecnologias
 <ul>
