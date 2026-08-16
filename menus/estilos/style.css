@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+*{/*remove as margens e espaçamentos padrão que o navegador coloca nos elementos*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/*faz com que padding e border sejam incluidos no tamanho do elemento*/
+}
+
+body{
+      font-family: Arial, Helvetica, sans-serif;
+      overflow-x: hidden;/*impede uma barra horizonttal quando o menu estiver escondido fora da tela*/
+      min-height: 100vh;/*faz o body ocupar pelomenos toda a latura da tela*/
+     display: flex;
+     flex-direction: column;
+
+}
+
+header{
+    display: flex;/*coloca os elementos lado a lado*/
+    justify-content: space-between;/*coloca o título de um lado e o botão do outro*/
+    align-items: center;/*alinha verticalmente os elemntos*/
+    padding: 20px;/*espaçamento interno*/
+    background: #111;/*cor do cabeçalho*/
+    color: white;/*cor do texto*/
+}
+
+#botao-menu{
+    font-size: 32px;/*tamanho da letra do simbolo*/
+    background: none;/*remove a aparencia padrão do botão*/
+    border: none;/*remove borda*/
+    color: white;/*cor do menu*/
+    cursor: pointer;/*mostra que o elemento ou o menu pode ser clicado*/
+}
+
+#menu{
+    position: fixed;/*o menu sera fixado em relação à janela.Assim ela podera deslizar pela tela.*/
+    top: 0;/*começa do topo da tela*/
+    left: 0;/* encosta na direita */
+    height: 100vh;/* o menu vai ocuapar toda allargura da tela */
+    width: 250px;/* largura do menu */
+    background-color: #222;/* cor do menu */
+    transform: translateX(-100%);/* permite mover o menu para a esquerda exatamente o equivalente à sua largura */
+    transition: transform 0.4s ease;/* cria uma animação suave o menu muda de posição */
+    z-index: 1000;/* fica acima dos outros elementos */
+}
+
+#menu ul{
+    list-style: none;
+    padding: 80px 20px 20px;
+
+}
+
+#menu li{
+    margin-bottom: 20px;/*espaço entre os links*/
+}
+
+#menu a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+
+}
+
+#menu a:hover{
+    background-color: #535252;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+#menu.ativo{
+    transform: translateX(0);
+}
+.material-symbols-outlined{
+    position: relative;
+    z-index: 2000;
+    cursor: pointer;
+}
+main{
+    padding: 30px;
+    flex: 1;
+}
+
+footer{
+    padding: 20px;
+    background-color: #111;
+    color: white;
+    text-align: center;
+}
