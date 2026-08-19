@@ -1,0 +1,156 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    overflow-x: hidden;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #111;
+    color: white;
+}
+#btn-abrir,#btn-fechar{
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+}
+
+.material-symbols-outlined{
+    font-size: 32px;
+}
+
+#menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100vh;
+    background-color: #222;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+    z-index: 1000;
+    padding: 20px;
+}
+
+#btn-fechar{
+    display: block;
+    margin-left: auto;
+}
+
+#menu ul{
+    list-style: none;
+    margin-top: 20px;
+}
+
+#menu li{
+    margin-bottom: 15px;
+}
+
+#menu a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    display: block;
+    transition: 0.2s;
+}
+
+#menu a:hover{
+    color: #e63946;
+    transform: translateX(5px);
+}
+
+#menu.aberto{
+    transform: translateX(0);
+}
+
+#overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0,0,0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opcity 0.4s ease;
+
+    z-index: 900;
+}
+
+#overlay.aberto{
+    opacity: 1;
+    visibility: visible;
+}
+
+main{
+    flex:1;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+main h1{
+    margin-bottom: 15px;
+}
+
+main p{
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+footer{
+    padding: 20px;
+    background-color: #111;
+    color: white;
+    text-align: center;
+}
+@media(min-width:768px){
+    #btn-abrir{
+        display: none;
+    }
+
+    #menu{
+        position: static;
+        width: 100%;
+        height: auto;
+        transform: none;
+        transition: none;
+        padding: 15px 30px;
+        background-color: #222;
+    }
+
+    #menu ul{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin: 0;
+    }
+
+    #menu li{
+        margin: 0;
+    }
+
+    #menu a{
+        font-size: 18px;
+    }
+    #overlay{
+        display: none;
+    }
+}
