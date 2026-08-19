@@ -16,12 +16,17 @@ body{
 }
 
 header{
+    position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 20px;
     background: #111;
     color: white;
+}
+#btn-abrir{
+    position: absolute;
+    left: 20px;
 }
 #btn-abrir,#btn-fechar{
     border: none;
@@ -121,7 +126,29 @@ footer{
     color: white;
     text-align: center;
 }
+@media(orientation: landscape) and (max-width:767px){
+     #btn-abrir{
+        display: block;
+    }
+
+    #btn-fechar{
+        display: block;
+    }
+
+    #menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 280px;
+        height: 100vh;
+        transform: translateX(-100%);
+        transition: transform 0.4s ease;
+        z-index: 1000;
+    }
+
+}
 @media(min-width:768px){
+   
     #btn-abrir{
         display: none;
     }
@@ -159,24 +186,3 @@ footer{
     }
 }
 
-@media(orientation: landscape) and (max-width:767px){
-     #btn-abrir{
-        display: block;
-    }
-
-    #btn-fechar{
-        display: block;
-    }
-
-    #menu{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 280px;
-        height: 100vh;
-        transform: translateX(-100%);
-        transition: transform 0.4s ease;
-        z-index: 1000;
-    }
-
-}
