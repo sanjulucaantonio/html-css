@@ -126,6 +126,10 @@ footer{
         display: none;
     }
 
+    #btn-fechar{
+        display: none;
+    }
+
     #menu{
         position: static;
         width: 100%;
@@ -153,4 +157,26 @@ footer{
     #overlay{
         display: none;
     }
+}
+
+@media(orientation: landscape) and (max-width:767px){
+     #btn-abrir{
+        display: block;
+    }
+
+    #btn-fechar{
+        display: block;
+    }
+
+    #menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 280px;
+        height: 100vh;
+        transform: translateX(-100%);
+        transition: transform 0.4s ease;
+        z-index: 1000;
+    }
+
 }
