@@ -8,25 +8,26 @@
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    min-height: 100vh;
+    min-height: 100vh;/*faz o body ocupar pelomenos a altura da tela*/
+    /*organiza os elemeentos verticalmente*/
     display: flex;
     flex-direction: column;
-
+/*impede rolagem horizontal*/
     overflow-x: hidden;
 }
 
 header{
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex;/*coloca os elementos lado a lado*/
+    justify-content: center;/*centraliza os elementos*/
+    align-items: center;/*centraliza os elementos*/
     padding: 20px;
     background: #111;
     color: white;
 }
 #btn-abrir{
-    position: absolute;
-    left: 20px;
+    position: absolute;/*permite mover o menu*/
+    left: 20px;/*coloca o menu a esquerda*/
 }
 #btn-abrir,#btn-fechar{
     border: none;
@@ -36,23 +37,24 @@ header{
 }
 
 .material-symbols-outlined{
-    font-size: 32px;
+    font-size: 32px;/*tamanho dos icones*/
 }
 
 #menu{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 280px;
-    height: 100vh;
+    position: fixed;/*fixa o menu na tela*/
+    top: 0;/*começa no topo*/
+    left: 0;/*fica encostado a esquerda*/
+    width: 280px;/*define a largura*/
+    height: 100vh;/*ocupa toda altura*/
     background-color: #222;
-    transform: translateX(-100%);
-    transition: transform 0.4s ease;
-    z-index: 1000;
-    padding: 20px;
+    transform: translateX(-100%);/*esconde o menu para fora da tela*/
+    transition: transform 0.4s ease;/*cria o efeito do slide*/
+    z-index: 1000;/*fica acima do overlay*/
+    padding: 20px;/*espaçamento interno*/
 }
 
 #btn-fechar{
+    /*coloca o botão X no lado direito*/
     display: block;
     margin-left: auto;
 }
@@ -71,17 +73,17 @@ header{
     color: white;
     font-weight: bold;
     font-size: 18px;
-    display: block;
-    transition: 0.2s;
+    display: block;/*permite usar melhor o hover*/
+    transition: 0.2s;/*anima o hover*/
 }
 
 #menu a:hover{
     color: #e63946;
-    transform: translateX(5px);
+    transform: translateX(5px);/*move ligeramente o link*/
 }
 
 #menu.aberto{
-    transform: translateX(0);
+    transform: translateX(0);/*mostra o menu*/
 }
 
 #overlay{
@@ -90,15 +92,16 @@ header{
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0,0,0.5);
-    opacity: 0;
-    visibility: hidden;
-    transition: opcity 0.4s ease;
+    background-color: rgba(0, 0,0,0.5);/*cor preta transparente*/
+    opacity: 0;/*começa invisivel*/
+    visibility: hidden;/*não permite clique enquanto invisivel*/
+    transition: opcity 0.4s ease;/*animação*/
 
-    z-index: 900;
+    z-index: 900;/*fica atrás do menu*/
 }
 
 #overlay.aberto{
+    /*mostra o overlay*/
     opacity: 1;
     visibility: visible;
 }
@@ -150,24 +153,34 @@ footer{
 @media(min-width:768px){
    
     #btn-abrir{
+        /*esconde o botão humbúrger*/
         display: none;
     }
 
     #btn-fechar{
+        /*esconde o botao X*/
         display: none;
     }
 
     #menu{
+        /*remove a posição fixa*/
         position: static;
+        /*ocupa apenas o espaço necessário*/
         width: 100%;
+        /*altura automática*/
         height: auto;
+        /*remove o deslocamento*/
         transform: none;
+        /*remove a animação*/
         transition: none;
+        /*organiza os elementos*/
         padding: 15px 30px;
+        /*cor*/
         background-color: #222;
     }
 
     #menu ul{
+        /*organiza os links horizontalmente*/
         display: flex;
         justify-content: center;
         gap: 30px;
@@ -175,14 +188,14 @@ footer{
     }
 
     #menu li{
-        margin: 0;
+        margin: 0;/*remove a maregm vertical*/
     }
 
     #menu a{
-        font-size: 18px;
+        font-size: 18px;/*mantem o tamanho dos links*/
     }
     #overlay{
-        display: none;
+        display: none;/*dispensa o overlay*/
     }
 }
 
