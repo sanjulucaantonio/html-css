@@ -1,9 +1,9 @@
 //seleccionar o menu
-const menu= document.querySelector('#menu');
+const menu = document.querySelector('#menu');
 //seleccionar o botão de abrir
-const btnAbrir= document.querySelector('#btn-abrir');
+const btnAbrir = document.querySelector('#btn-abrir');
 //seleccionar o botão de fechar
-const btnFechar= document.querySelector('#btn-fechar');
+const btnFechar = document.querySelector('#btn-fechar');
 //seleccionar o overlay
 const overlay = document.querySelector('#overlay');
 //função para abrir o meu
